@@ -219,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(MainActivity.this, R.string.no_internet, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
+            buttonCalculate.setText(R.string.no_internet);
             buttonCalculate.setEnabled(false);
         }
         // create spinners for designs, carats, ring profile,stones
@@ -428,7 +429,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 goldPricePerGrammar = (Double.parseDouble(price_TextView.getText().toString()) / 1000);
 
-                Log.v(LOG_TAG, "gold price: " + goldPricePerGrammar + "\n" + "woman multiplier carats:" + woman_multiplier_carats + "\n" + "weightcarats multiplier woman:" + weightCaratsMultiplierWoman + "\n" + "woman multiplier profile:" + woman_multiplier_profile + "\n" + "weight:" + weightTable().get(posW) + "\n" + "labour cost:" + labourCostW + "\n"+ "positionWOMAN:"+ posW);
+                //Log.v(LOG_TAG, "gold price: " + goldPricePerGrammar + "\n" + "woman multiplier carats:" + woman_multiplier_carats + "\n" + "weightcarats multiplier woman:" + weightCaratsMultiplierWoman + "\n" + "woman multiplier profile:" + woman_multiplier_profile + "\n" + "weight:" + weightTable().get(posW) + "\n" + "labour cost:" + labourCostW + "\n"+ "positionWOMAN:"+ posW);
                 double womanStoneValue;
                 double manStoneValue;
                 double extraWeightMan;
@@ -444,7 +445,7 @@ public class MainActivity extends AppCompatActivity {
                 // woman_ring_price_no_vat.setText(getString(R.string.price_no_vat) + " " + String.format("%.0f", womanRingPriceNoVAT) + " €");
                 // woman_ring_price_with_vat.setText(getString(R.string.price_with_vat) + " " + String.format("%.0f", womanRingPriceWithVAT) + " €");
 
-                Log.v(LOG_TAG, "gold price: " + goldPricePerGrammar + "\n" + "man multiplier carats:" + man_multiplier_carats + "\n" + "weightcarats multiplier man:" + weightCaratsMultiplierMan + "\n" + "man multiplier profile:" + man_multiplier_profile + "\n" + "weight:" + (weightTable().get(posM) + 0.5) + "\n" + "labour cost:" + labourCostM + "\n"+ "positionMAN:"+ posM);
+                //Log.v(LOG_TAG, "gold price: " + goldPricePerGrammar + "\n" + "man multiplier carats:" + man_multiplier_carats + "\n" + "weightcarats multiplier man:" + weightCaratsMultiplierMan + "\n" + "man multiplier profile:" + man_multiplier_profile + "\n" + "weight:" + (weightTable().get(posM) + 0.5) + "\n" + "labour cost:" + labourCostM + "\n"+ "positionMAN:"+ posM);
                 // no man design is selected
                 if (posM == 0) {
                     extraWeightMan = 0;
